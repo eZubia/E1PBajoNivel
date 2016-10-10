@@ -182,8 +182,10 @@ public class Model {
      * @throws IllegalAccessException cuando los métodos Get no estan como 
      * publicos
      * @throws IllegalArgumentException si alguno de los Get tiene algún parámetro
-     * @throws InvocationTargetException en caso debj  qnu  e  qu
-     * @throws SQLException 
+     * @throws InvocationTargetException en caso de que el objeto al cual se 
+     * le este invocando el método no lo contenga
+     * @throws SQLException no tener correctamente el modelo entidad relación o 
+     * el nombre de los atributos en java
      */
     public static void putParametersInQuery(PreparedStatement ps, List<Field> fields, Object obj, Boolean forUpdate) throws NoSuchMethodException, IllegalAccessException, IllegalArgumentException, InvocationTargetException, SQLException {
         for (Field field : fields) {

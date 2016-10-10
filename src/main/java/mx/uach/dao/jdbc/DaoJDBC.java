@@ -24,6 +24,11 @@ import mx.uach.dao.models.genericos.Model;
  */
 public class DaoJDBC implements Dao{
 
+    /**
+     * {@inheritDoc}
+     * 
+     * @see Model
+     */
     @Override
     public Object getDataById(Integer id, Class clazz) {
         try {
@@ -60,6 +65,11 @@ public class DaoJDBC implements Dao{
         return null;
     }
 
+    /**
+     * {@inheritDoc}
+     * 
+     * @see Model
+     */
     @Override
     public void dataProcces(Object obj, CRUD crud) {
         try {
@@ -112,6 +122,11 @@ public class DaoJDBC implements Dao{
         }
     }
 
+    /**
+     * {@inheritDoc}
+     * 
+     * @see Model
+     */
     @Override
     public List<Object> getDataByCriteria(String criterio, Class clazz) {
         List<Object> objects = new ArrayList<>();
